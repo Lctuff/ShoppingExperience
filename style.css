@@ -62,6 +62,7 @@ aside a
      padding: 2%;
      border-radius: 5px; 
      width: 90%;
+     display: table;
 }
 .featuredImage
 {
@@ -109,4 +110,47 @@ footer
     margin: 0 auto;
     font-style: italic;
     padding-top: 35px;
+}
+.tableRow
+{
+    display: table-row;
+}
+.tableCell
+{
+    display: table-cell;
+    padding: 10px 0 10px 0;
+}
+.tableCell:first-child
+{
+    font-weight: bold;
+}
+#cartButtons
+{
+    text-align: right;
+    padding: 15px 3% 0 0;
+}
+#cartButtons button
+{
+    background-color: #037dbe;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 2%;
+    cursor: pointer;
+}
+#cartButtons #clearCartButton
+{
+    background-color: #eeeeee;
+    border: 1px solid #037dbe;
+    color: #037dbe;
+}
+.borderBottom
+{
+    border-bottom: 1px solid #bbbbbb;
+}
+.removeLink
+{
+    text-align: right;
+    font-size: 80%;
+    color: #037dbe;
 }
