@@ -1,4 +1,4 @@
-const imagePath = "images/shop/thumbnails";
+const imagePath = "images/images/shop/thumbnails/";
 const products = [
     {
         id: 1,
@@ -63,5 +63,5 @@ const products = [
         description: "A Bob Ross plastic figure holding a paint palette",
         quantity: 1,
         price: 18.95
-    },
+    }
 ];
