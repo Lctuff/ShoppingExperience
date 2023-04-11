@@ -23,9 +23,9 @@ function saveToLocalStorage(){
         localStorage.setItem("CART", JSON.stringify(cart) );
         displaycart();
         }
-        if(cartButton[i]){
+        
         cartButton[i].addEventListener('click', productButtons ,false);
-        }
+        
        };
     }
 saveToLocalStorage();
