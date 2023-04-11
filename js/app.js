@@ -28,3 +28,12 @@ function removeFromCart(){
 
   }
 }
+function clearCart(){
+  const clearCartButton = document.getElementById("clearCartButton");
+  clearCartButton.addEventListener("click",  ()=>{
+    cart = [];
+    localStorage.clear();
+    displayCart();
+  })
+}
+clearCart();
