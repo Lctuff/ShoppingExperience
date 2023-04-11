@@ -21,7 +21,7 @@ function saveToLocalStorage(){
         let selectedProduct = products.find((product)=> product.id == cartButton[i].id);
         cart.push(selectedProduct); 
         localStorage.setItem("CART", JSON.stringify(cart) );
-        displaycart();
+        displayCart();
         }
         
         cartButton[i].addEventListener('click', productButtons ,false);
@@ -29,7 +29,7 @@ function saveToLocalStorage(){
        };
     }
 saveToLocalStorage();
-function displaycart(){
+function displayCart(){
     clearStorageAndCart();
     sideBarContainer.innerHTML = ""
     cart.forEach(cartItem => {
@@ -48,5 +48,6 @@ function displaycart(){
             </div>
         </div>`
     });
+    removeFromCart();
 }
-displaycart();
+displayCart();
