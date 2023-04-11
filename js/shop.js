@@ -51,3 +51,5 @@ function displayCart(){
     removeFromCart();
 }
 displayCart();
+let checkoutButton = document.getElementById('checkoutButton');
+checkoutButton.addEventListener('click', function(){window.location = 'cart.html'; });

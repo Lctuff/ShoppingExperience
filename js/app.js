@@ -34,6 +34,6 @@ function clearCart(){
     cart = [];
     localStorage.clear();
     displayCart();
-  })
+  });
 }
 clearCart();
