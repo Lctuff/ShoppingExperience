@@ -16,7 +16,7 @@ addProducts();
     
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
-    for(let i = 0; i <= cartButton.length; i++){
+    for(let i = 0; i < cartButton.length; i++){
         let productButtons = function(){
         let selectedProduct = products.find((product)=> product.id == cartButton[i].id);
         cart.push(selectedProduct); 
