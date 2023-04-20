@@ -11,7 +11,7 @@ function displayCartProducts(){
                         <p class="cartTitle">${cartItem.name}</p>
                         <p class="cartDescription">${cartItem.description}</p>
                     <div class="cartQuantity">
-                        <input type="number" value="1" min="1" max="5">
+                        <input type="number" value="${cartItem.quantity}" min="1" max="5">
                     </div>
                     <p class="cartPrice">&dollar;${cartItem.price}</p>
                  </div>
