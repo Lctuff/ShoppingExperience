@@ -70,11 +70,11 @@ function displayOrderSummary(){
                         &dollar; ${tax.toFixed(2)}
                     </div>
                 </div>
-                <div class="tableRow bold">
+                <div class="tableRow">
                     <div class="tableCell">
                         Total
                     </div>
-                    <div class="tableCell">
+                    <div class="tableCell bold">
                         &dollar; ${total.toFixed(2)}
                     </div>
                 </div>
