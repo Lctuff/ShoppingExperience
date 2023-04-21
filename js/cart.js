@@ -25,5 +25,61 @@ function displayCartProducts(){
     }
 }
 displayCartProducts();
+let subtotal,
+    shipping,
+    tax,
+    total;
+function calculateOrderSummary(){
+    subtotal = 0;
+    shipping = 0;
+    tax = 0;
+    total = 0;
+    clearStorageAndCart();
+    cart.forEach((cartItem) =>{
+        subtotal += cartItem.price;
+        shipping += 1;
+    });
+    tax = (subtotal + shipping)*0.061;
+    total = subtotal + shipping + tax;
+}
+ calculateOrderSummary();
+function displayOrderSummary(){
+    calculateOrderSummary();
+    sideBarContainer.innerHTML =`
+                <div class="tableRow">
+                    <div class="tableCell">
+                        Subtotal
+                    </div>
+                    <div class="tableCell">
+                        &dollar; ${subtotal.toFixed(2)}
+                    </div>
+                </div>
+                <div class="tableRow">
+                    <div class="tableCell">
+                        Shipping
+                    </div>
+                    <div class="tableCell">
+                        &dollar; ${shipping.toFixed(2)}
+                    </div>
+                </div>
+                <div class="tableRow">
+                    <div class="tableCell borderBottom">
+                        Sales Tax
+                    </div>
+                    <div class="tableCell borderBottom">
+                        &dollar; ${tax.toFixed(2)}
+                    </div>
+                </div>
+                <div class="tableRow bold">
+                    <div class="tableCell">
+                        Total
+                    </div>
+                    <div class="tableCell">
+                        &dollar; ${total.toFixed(2)}
+                    </div>
+                </div>
+    `;
+}
+displayOrderSummary();
 
- 
+                
