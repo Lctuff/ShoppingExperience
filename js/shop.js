@@ -24,9 +24,9 @@ function saveToLocalStorage(){
                 cartItemSearch.quantity++;
             }else{
                 cart.push(selectedProduct); 
+                }
                 localStorage.setItem("CART", JSON.stringify(cart) );
                 displayCart();
-            }
         }
         
         cartButton[i].addEventListener('click', productButtons ,false);
@@ -56,6 +56,7 @@ function displayCart(){
         </div>`
     });
     removeFromCart();
+    updateQuantity();
 }
 displayCart();
 let checkoutButton = document.getElementById('checkoutButton');

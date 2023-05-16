@@ -44,6 +44,7 @@ function calculateOrderSummary(){
 }
  calculateOrderSummary();
 function displayOrderSummary(){
+    updateQuantity();
     calculateOrderSummary();
     sideBarContainer.innerHTML =`
                 <div class="tableRow">
