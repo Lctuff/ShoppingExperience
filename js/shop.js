@@ -43,7 +43,9 @@ function displayCart(){
             </div>
         </div>
         <div class="tableRow">
-            <div class="tableCell borderBottom"></div>
+            <div class="tableCell borderBottom">
+                <input class="quantityNumberInput" type="number" id="${cartItem.id}" value="${cartItem.quantity}" min="1" max="5">
+            </div>
                 <a id="${cartItem.id}" class="tableCell borderBottom removeLink" href="#">Remove</a>
             </div>
         </div>`
