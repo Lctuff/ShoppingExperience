@@ -36,8 +36,8 @@ function calculateOrderSummary(){
     total = 0;
     clearStorageAndCart();
     cart.forEach((cartItem) =>{
-        subtotal += cartItem.price;
-        shipping += 1;
+        subtotal += cartItem.price * cartItem.quantity;
+        shipping += 1 * cartItem.quantity;
     });
     tax = (subtotal + shipping)*0.061;
     total = subtotal + shipping + tax;
