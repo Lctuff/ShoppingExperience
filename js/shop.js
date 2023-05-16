@@ -18,10 +18,15 @@ function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
     for(let i = 0; i < cartButton.length; i++){
         let productButtons = function(){
-        let selectedProduct = products.find((product)=> product.id == cartButton[i].id);
-        cart.push(selectedProduct); 
-        localStorage.setItem("CART", JSON.stringify(cart) );
-        displayCart();
+            let selectedProduct = products.find((product)=> product.id == cartButton[i].id);
+            let cartItemSearch = cart.find( (cartItem) => cartItem.id == selectedProduct.id);
+            if(cartItemSearch){
+                cartItemSearch.quantity++;
+            }else{
+                cart.push(selectedProduct); 
+                localStorage.setItem("CART", JSON.stringify(cart) );
+                displayCart();
+            }
         }
         
         cartButton[i].addEventListener('click', productButtons ,false);
