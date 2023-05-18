@@ -129,7 +129,7 @@ footer
     text-align: right;
     padding: 15px 3% 0 0;
 }
-#cartButtons button
+#cartButtons button , #paginateButtons button
 {
     background-color: #037dbe;
     border: none;
@@ -138,11 +138,25 @@ footer
     padding: 2%;
     cursor: pointer;
 }
-#cartButtons #clearCartButton
+#cartButtons #clearCartButton , #paginateButtons button
 {
     background-color: #eeeeee;
     border: 1px solid #037dbe;
     color: #037dbe;
+}
+#paginateButtons button
+{
+    padding: 0.5%;
+    width: 8%;
+}
+#paginateButtons
+{
+    text-align: right;
+}
+#paginateButtons button:disabled{
+    border: #bbbbbb;
+    color: #bbbbbb;
+    cursor: auto;
 }
 .borderBottom
 {
@@ -247,15 +261,18 @@ footer
 {
     text-align: right;
 }
-#emptyCart{
+#emptyCart
+{
     margin: 0;
     font-style: italic;
 }
-.sticky{
+.sticky
+{
     position: fixed;
     top: 8px;
     right: 5.35%;
 }
-#checkoutThankYou{
+#checkoutThankYou
+{
     padding: 10px;
 }
