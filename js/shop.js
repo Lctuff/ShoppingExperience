@@ -38,6 +38,7 @@ $('.next').click(function(){
     }
     paginate();
     saveToLocalStorage();
+    fadeButtons();
 });
 $('.previous').click(function(){
     if(currentPage > 1){
@@ -45,6 +46,7 @@ $('.previous').click(function(){
     }
     paginate();
     saveToLocalStorage();
+    fadeButtons();
 });
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
